@@ -1,4 +1,4 @@
-# amatzi.github.io
+# hsonne.github.io
 
 My personal website is created with [Hugo](https://gohugo.io/) with the fantastic
 [Academic](https://sourcethemes.com/academic/) theme. 
@@ -72,16 +72,16 @@ also the files:
 are used as both are sucessfully used for automating the update process 
 for the [fakin.doc](https://github.com/kwb-r/fakin.doc) website. 
 
-Each push to the repo`s [dev](https://github.com/mrustl/amatzi.github.io/tree/dev) 
-branch triggers a Travis [![Travis build](https://travis-ci.org/mrustl/amatzi.github.io.svg?branch=dev)](https://travis-ci.org/mrustl/amatzi.github.io). 
+Each push to the repo`s [dev](https://github.com/mrustl/hsonne.github.io/tree/dev) 
+branch triggers a Travis [![Travis build](https://travis-ci.org/mrustl/hsonne.github.io.svg?branch=dev)](https://travis-ci.org/mrustl/hsonne.github.io). 
 
-After finalising the Travis [![Travis build](https://travis-ci.org/mrustl/amatzi.github.io.svg?branch=dev)](https://travis-ci.org/mrustl/amatzi.github.io) the website is automatically pushed to the 
-repo`s [master](https://github.com/mrustl/amatzi.github.io/tree/master) branch,
+After finalising the Travis [![Travis build](https://travis-ci.org/mrustl/hsonne.github.io.svg?branch=dev)](https://travis-ci.org/mrustl/hsonne.github.io) the website is automatically pushed to the 
+repo`s [master](https://github.com/mrustl/hsonne.github.io/tree/master) branch,
 which contains all necessary files for serving the website!
 
 ### Step 4: Visit the updated website
 
-The content of the updated website is available at [https://amatzi.github.io](https://amatzi.github.io).
+The content of the updated website is available at [https://hsonne.github.io](https://hsonne.github.io).
 
 
 
@@ -102,49 +102,71 @@ publications from ORCID:
 installed_pkgs <- rownames(installed.packages())
 
 ## Install missing CRAN pkgs
-cran_pkgs <- c("remotes", "dplyr", "RefManageR", "reticulate", "data.table")
+cran_pkgs <- c("remotes", "dplyr", "readr", "RefManageR", "reticulate", "data.table")
 cran_missing <- !cran_pkgs %in% installed_pkgs
 
 if(any(cran_missing)) {
   install.packages(cran_pkgs[cran_missing] , repos = "https://cloud.r-project.org")
 }
 
+#remotes::install_github("ropensci/RefManageR")
+
 ## Install latest version of KWB-R GitHub "kwb.orcid" package
 remotes::install_github("kwb-r/kwb.orcid")
   
 library(magrittr)
 
-secret <- read.csv("secret.csv")
+secret <- read.csv("secret.csv", stringsAsFactors = FALSE)
 Sys.setenv("ORCID_TOKEN" =  secret$orcid_token)
+options("zenodo_token" = secret$zenodo_token)
+zenodo_dois <- kwb.pkgstatus::zen_collections()
+
+get_zenodo_for_orcid <- function(orcid = "0000-0001-9134-2871") {
+
+orcid_cols <- stringr::str_subset(names(zenodo_dois), 
+                                  "metadata\\.creators\\.orcid")
+
+idx <- rowSums(zenodo_dois[, orcid_cols] == orcid, na.rm = TRUE) >= 1
+
+zenodo_dois[idx, ]
+}
+
+Sys.setlocale(locale = "german") ### for correct "Umlaute"
 
 ## Get all of Michael Rustler`s publications from ORCID
-orcid <- kwb.orcid::get_kwb_orcids()[4]
-publications <- kwb.orcid::create_publications_df_for_orcids(orcids = orcid)
+orcid <- kwb.orcid::get_kwb_orcids()[2]
+
+publications_orcid <- kwb.orcid::create_publications_df_for_orcids(orcids = orcid)
 
 ## Put all with DOI in a data.frame 
-publications_with_dois <- data.table::rbindlist(publications$`external-ids.external-id`) %>%  
-    dplyr::filter(`external-id-type` == "doi")
-  
+publications_with_dois <- data.table::rbindlist(publications_orcid$`external-ids.external-id`) %>%  
+  dplyr::filter(`external-id-type` == "doi")
+
+
+publications_zenodo <- get_zenodo_for_orcid(orcid)
+
+dois <- unique(c(as.character(publications_zenodo$doi), 
+                publications_with_dois$`external-id-value`))
 
 ## Create .bibtex from DOIs with RefManageR
 ## for details see: browseURL("https://github.com/ropensci/RefManageR/")
 write_bibtex <- function(dois, file = "publications_orcid.bib", 
                          overwrite = TRUE) {
-
-if(file.exists(file) == FALSE ||  overwrite == TRUE && file.exists(file))  {
-  cat(sprintf("Bibtex file '%s'...", file))  
-try(RefManageR::GetBibEntryWithDOI(dois,
-                               temp.file = file, 
-                               delete.file = FALSE))
-  cat("Done!")
-} else {
-   print(sprintf("Bibtex file %s already existing. Specify 'overwrite=TRUE' if 
+  
+  if(file.exists(file) == FALSE ||  overwrite == TRUE && file.exists(file))  {
+    cat(sprintf("Bibtex file '%s'...", file))  
+    try(RefManageR::GetBibEntryWithDOI(dois,
+                                       temp.file = file, 
+                                       delete.file = FALSE))
+    cat("Done!")
+  } else {
+    print(sprintf("Bibtex file %s already existing. Specify 'overwrite=TRUE' if 
    you want to overwrite it!", file))
- }
+  }
 }
 
 ## Export all cited publications to  "publications_orcid.bib"
-write_bibtex(dois = publications_with_dois$`external-id-value`)
+write_bibtex(dois)
 
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
@@ -153,7 +175,7 @@ write_bibtex(dois = publications_with_dois$`external-id-value`)
 ## Download Anaconda with Python 3.7 from website (if not installed)
 #browseURL("https://www.anaconda.com/download/")
 
-python_path <- "C:/Users/amatzi.KWB/AppData/Local/Continuum/anaconda3"
+python_path <- "C:/Users/mrustl.KWB/AppData/Local/Continuum/anaconda3"
 
 Sys.setenv(RETICULATE_PYTHON = python_path)
 
@@ -184,12 +206,15 @@ cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"
                normalizePath(file.path(python_path, "Scripts/activate.bat")), 
                env,
                normalizePath(getwd()),
-               "knitcitations.bib",
+               "publications_orcid.bib",
                option_overwrite)
 
 writeLines(cmds,con = "import_bibtex.bat")
 
 shell("import_bibtex.bat")
+
+### Now check the folder "content/publication". Your publications should be added
+### now!
 
 ```
 
@@ -198,9 +223,27 @@ ORCID publications should be added there now!
 
 **Important note:** in case the it was possible to resolve the DOI and create a
 valid bibtex entry with the
-[knitcitations](https://github.com/cboettig/knitcitations) package these will be
+[RefManageR](https://github.com/ropensci/RefManageR) package these will be
 missing in the **content/publication* folder. Check the step where
-`knitcitations::citep` is called and watch for errors!
+`RefManageR::GetBibEntryWithDOI` is called and watch for errors!
 
 For pushing the changes to your website go through the steps defined in 
 [How to update the website](#1-how-to-update-the-website) again!
+
+
+## 3 Getting portrait picture
+
+Automatically do this with the magick R package: 
+
+### Download, crop and save Andues portrait with magick!
+
+```r
+library(magick)
+library(magrittr)
+url <- file.path("https://www.kompetenz-wasser.de/wp-content/uploads/2017/07",
+       "hauke_sonnenberg-600x400.jpg")
+       
+magick::image_read(url) %>%
+  magick::image_crop(geometry = magick::geometry_area(250,300, 175, 0)) %>% 
+  magick::image_write("static/img/author.jpg")
+```
