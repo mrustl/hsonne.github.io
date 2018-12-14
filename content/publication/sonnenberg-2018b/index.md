@@ -9,5 +9,6 @@ publication = ""
 tags = ["R package"]
 url_pdf = "https://zenodo.org/record/1309312"
 doi = "10.5281/zenodo.1309312"
+projects = ["fakin"]
 +++
 
