@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 on </title>
+    <link>https://hsonne.github.io/publication_types/2/</link>
+    <description>Recent content in 2 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2018 Andreas Matzinger</copyright>
+    <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hsonne.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The relevance of sewer deterioration modelling to support asset management strategies</title>
+      <link>https://hsonne.github.io/publication/caradot-2017/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/caradot-2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Impacts of combined sewer overflows on a large urban river textendash Understanding the effect of different management strategies</title>
+      <link>https://hsonne.github.io/publication/riechel-2016/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/riechel-2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Influence of local calibration on the quality of online wet weather discharge monitoring: feedback from five international case studies</title>
+      <link>https://hsonne.github.io/publication/caradot-2014/</link>
+      <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/caradot-2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Best data handling practices in water-related research</title>
+      <link>https://hsonne.github.io/publication/sonnenberg-2013/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/sonnenberg-2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The influence of local calibration on the quality of UV-VIS spectrometer measurements in urban stormwater monitoring</title>
+      <link>https://hsonne.github.io/publication/caradot-2013/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/caradot-2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluation of effectiveness of combined sewer overflow control measures by operational data</title>
+      <link>https://hsonne.github.io/publication/schroeder-2011/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://hsonne.github.io/publication/schroeder-2011/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
