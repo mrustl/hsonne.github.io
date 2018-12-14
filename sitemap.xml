@@ -5,7 +5,15 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/publication/matzinger-2018/</loc>
-      <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2018b/</loc>
+      <lastmod>2018-07-11T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -14,14 +22,6 @@
     
       <loc>https://mrustl.de/hsonne.github.io/project/optiwells-2/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2018b/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -76,16 +76,16 @@
     
     <url>
     
-      <loc>https://mrustl.de/hsonne.github.io/publication/rustler-2016/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <loc>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</loc>
+      <lastmod>2016-09-06T00:00:00+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <loc>https://mrustl.de/hsonne.github.io/publication/rustler-2016a/</loc>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -134,7 +134,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/publication_types/0/</loc>
-      <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -169,7 +169,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/publication_types/</loc>
-      <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -178,7 +178,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/r-package/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-11T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -187,7 +187,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/r-programming/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -196,7 +196,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-11T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -205,7 +205,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/automation/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -232,7 +232,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/environmental-modelling/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -241,7 +241,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/open-source-software/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -250,7 +250,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/reproducibility/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -268,7 +268,7 @@
     <url>
     
       <loc>https://mrustl.de/hsonne.github.io/tags/water-research/</loc>
-      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

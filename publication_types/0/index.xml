@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2018 Andreas Matzinger</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mrustl.de/hsonne.github.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>kwb.resilience (v.0.1.0): R Package for the Quantification of Technical Resilience</title>
       <link>https://mrustl.de/hsonne.github.io/publication/matzinger-2018/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mrustl.de/hsonne.github.io/publication/matzinger-2018/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>kwb.fakin (v0.3.0)</title>
       <link>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2018b/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2018b/</guid>
       <description></description>
@@ -49,20 +49,20 @@
     </item>
     
     <item>
-      <title>Wrap your model in an R package!</title>
-      <link>https://mrustl.de/hsonne.github.io/publication/rustler-2016/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <title>kwb.wtaq (v0.2.1)</title>
+      <link>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mrustl.de/hsonne.github.io/publication/rustler-2016/</guid>
+      <guid>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>kwb.wtaq (v0.2.1)</title>
-      <link>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <title>Wrap your model in an R package!</title>
+      <link>https://mrustl.de/hsonne.github.io/publication/rustler-2016a/</link>
+      <pubDate>Tue, 28 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mrustl.de/hsonne.github.io/publication/sonnenberg-2016/</guid>
+      <guid>https://mrustl.de/hsonne.github.io/publication/rustler-2016a/</guid>
       <description></description>
     </item>
     
